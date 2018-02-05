@@ -2,18 +2,59 @@
 html, body {
   margin: 0;
   height: 100%;
+  width: 100%;
+  background-color: #ededed;
 }
 
 #content {
-  margin: 0 150px;
-  padding: 75px;
+  margin: 0 auto;
+  padding: 0;
+  width: 65%;
   height: 100%;
-  background-color: #c1956e;
-  font-family: arial;
-
+  background-color: #d6caa4;
 }
 
 h1 {
-  margin: 0;
+  margin: 20px;
+  margin-top: 0;
+  position: relative;
+  top: 10px;
+  padding: 20px 0;
   text-align: center;
+  border: solid 10px black;
+  border-radius: 5px;
+}
+
+#dec {
+  margin-top: 150px;
+  position: relative;
+  float: left;
+  width: 50%;
+  display: inline;
+}
+
+#bin {
+  margin-top: 150px;
+  position: relative;
+  float: right;
+  width: 50%;
+  display: inline;
+}
+
+input, button {
+  margin: 10px auto;
+  border: none;
+  display: block;
+  width: 75%;
+}
+
+input {
+  padding: 8px 3px;
+  font-size: 20px;
+  text-align: right;
+}
+
+button {
+  font-size: 16px;
+  padding: 5px;
 }
