@@ -19,12 +19,25 @@ function dec2bin(decNum) {
   for (var i = 0; i < array.length; i++) {
     var binResult = binResult + array[i].toString();
   }
-  
+
   return binResult;
 };
 
+
 function bin2dec(binNum) {
   if (binNum == 0) return '0';
+
+  var binStr = binNum.toString();
+  var j = 0;
+  var decResult = 0;
+
+  for (var i = binStr.length; i > 0; i--) {
+    var n = parseInt(binStr[i-1]);
+    decResult += Math.pow(2,j)*n;
+    j++;
+  }
+
+  return decResult.toString();
 }
 
 
@@ -34,4 +47,10 @@ function decHandler(event) {
   inb.value = dec2bin(decNum);
 }
 
+function binHandler(event) {
+  var binNum = inb.value;
+  ind.value = bin2dec(binNum);
+}
+
 btd.addEventListener('click', decHandler);
+btb.addEventListener('click', binHandler);
